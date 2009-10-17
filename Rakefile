@@ -1,6 +1,6 @@
 require 'rake'
 
-task :test => ['test:pass'] # <-- change this
+task :test => ['test:fail'] # <-- change this
 
 namespace :test do
   task :pass do
