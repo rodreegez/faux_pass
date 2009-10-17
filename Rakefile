@@ -1,8 +1,15 @@
-require 'rubygems'
 require 'rake'
 
-task :default => [:test]
+task :test => ['test:pass'] # <-- change this
 
-task :test do
-  ruby "test/test_truth.rb"
+namespace :test do
+  task :pass do
+    ruby 'test_pass.rb'
+  end
+  task :fail do
+    ruby 'test_fail.rb'
+  end
+  task :error do
+    ruby 'test_error.rb'
+  end
 end
