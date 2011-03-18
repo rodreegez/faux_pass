@@ -2,6 +2,7 @@ require 'rake'
 
 task :test => ['test:fail'] # <-- change this
 
+
 namespace :test do
   task :pass do
     ruby 'test_pass.rb'
